@@ -39,7 +39,6 @@ namespaces.forEach(namespace => {
       })
 
       nsSocket.on('newMessage', text => {
-         console.log(nsSocket.rooms)
          const currRoom = Object.keys(nsSocket.rooms)[1]
          const nsRoom = namespace.rooms.find(room => room.roomTitle === currRoom)
          const fullMsg = {
