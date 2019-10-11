@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Chat = React.memo(({ socket, activeRoom }) => {
+const Chat = ({ socket, activeRoom }) => {
    const [messageText, setMessageText] = useState('')
    const [allMessages, setAllMessages] = useState([])
 
@@ -46,6 +46,6 @@ const Chat = React.memo(({ socket, activeRoom }) => {
          </>}
       </>
    )
-})
+}
 
 export default Chat
