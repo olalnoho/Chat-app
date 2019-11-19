@@ -31,25 +31,24 @@ class Room {
 }
 
 let namespaces = [];
-let wikiNs = new Namespace(0, 'Wiki', 'https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/103px-Wikipedia-logo-v2.svg.png', '/wiki');
-let mozNs = new Namespace(1, 'Mozilla', 'https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png', '/mozilla');
-let linuxNs = new Namespace(2, 'Linux', 'https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png', '/linux');
+let dogNs = new Namespace(0, 'Dogs', 'https://images.vexels.com/media/users/3/160071/isolated/lists/8a4c9b162a4495af9185c91a57b6334f-cute-dog-puppy-tail-ear-tongue-flat.png', '/dogs');
+let cookieNs = new Namespace(1, 'Cookies', 'http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Apps-preferences-web-browser-cookies-icon.png', '/cookies');
+let ieNs = new Namespace(2, 'Explorer', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Internet_Explorer_9_icon.svg/256px-Internet_Explorer_9_icon.svg.png', '/ie');
 
-namespaces.push(wikiNs, mozNs, linuxNs);
+namespaces.push(dogNs, cookieNs, ieNs);
 
-// Make the main room and add it to rooms. it will ALWAYS be 0
-wikiNs.addRoom(new Room(0, 'New Articles', 'Wiki'));
-wikiNs.addRoom(new Room(1, 'Editors', 'Wiki'));
-wikiNs.addRoom(new Room(2, 'Other', 'Wiki'));
+dogNs.addRoom(new Room(0, 'Funny dogs', 'Dogs'));
+dogNs.addRoom(new Room(1, 'Poodles', 'Dogs'));
+dogNs.addRoom(new Room(2, 'Treats', 'Dogs'));
 
-mozNs.addRoom(new Room(0, 'Firefox', 'Mozilla'));
-mozNs.addRoom(new Room(1, 'SeaMonkey', 'Mozilla'));
-mozNs.addRoom(new Room(2, 'SpiderMonkey', 'Mozilla'));
-mozNs.addRoom(new Room(3, 'Rust', 'Mozilla'));
+cookieNs.addRoom(new Room(0, 'Baking', 'Cookies'));
+cookieNs.addRoom(new Room(1, 'Eating', 'Cookies'));
+cookieNs.addRoom(new Room(2, 'Favourites', 'Cookies'));
+cookieNs.addRoom(new Room(3, 'General Cookie talk', 'Cookies'));
 
-linuxNs.addRoom(new Room(0, 'Debian', 'Linux'));
-linuxNs.addRoom(new Room(1, 'Red Hat', 'Linux'));
-linuxNs.addRoom(new Room(2, 'MacOs', 'Linux'));
-linuxNs.addRoom(new Room(3, 'Kernel Development', 'Linux'));
+ieNs.addRoom(new Room(0, 'General I.E Talk', 'Explorer'));
+ieNs.addRoom(new Room(1, 'Edge sucks', 'Explorer'));
+ieNs.addRoom(new Room(2, 'IE is best', 'Explorer'));
+ieNs.addRoom(new Room(3, 'Why we like IE', 'Explorer'));
 
 module.exports = namespaces;
