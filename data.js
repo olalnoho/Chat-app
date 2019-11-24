@@ -1,10 +1,12 @@
 class Namespace {
    constructor(id, nsTitle, img, endpoint) {
-      this.id = id
-      this.nsTitle = nsTitle
-      this.img = img
-      this.endpoint = endpoint
-      this.rooms = []
+      Object.assign(this, {
+         id,
+         nsTitle,
+         img,
+         endpoint,
+         rooms: []
+      })
    }
 
    addRoom(roomObj) {
@@ -14,11 +16,13 @@ class Namespace {
 
 class Room {
    constructor(roomId, roomTitle, namespace, privateRoom = false) {
-      this.roomId = roomId
-      this.roomTitle = roomTitle
-      this.namespace = namespace
-      this.privateRoom = privateRoom
-      this.history = []
+      Object.assign(this, {
+         roomId,
+         roomTitle,
+         namespace,
+         privateRoom,
+         history: []
+      })
    }
 
    addMessage(message) {
